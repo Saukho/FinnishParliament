@@ -1,6 +1,6 @@
-##The Parliament of Finland Android application
+<h1>The Parliament of Finland Android application</h1>
 
-####The operating principle of the application is to retrieve the information of a specific Member of Parliament according to the parliamentary parties.
+The operating principle of the application is to retrieve the information of a specific Member of Parliament according to the parliamentary parties.
 
 The information is retrieved from the parliamentary database and the application automatically updates the database to the SQLite Room database, 
 which is automatically updated if there are updates to the database.
