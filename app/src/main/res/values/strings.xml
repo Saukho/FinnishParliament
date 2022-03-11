@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Parliament</string>
+
+    <string name="info">Finnish Parliament App</string>
+    <string name="find_member">Show Parties</string>
+    <string name="member_name">member name</string>
+    <string name="member_title">member title</string>
+    <string name="full_name">Full Name</string>
+    <string name="date">Date</string>
+    <string name="comment">Latest Comment</string>
+</resources>

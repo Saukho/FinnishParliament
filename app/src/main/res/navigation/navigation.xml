@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="finnish.parliament.fragments.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_partyListFragment"
+            app:destination="@id/partyListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/partyListFragment"
+        android:name="finnish.parliament.fragments.PartyListFragment"
+        android:label="fragment_party_list"
+        tools:layout="@layout/fragment_party_list">
+        <action
+            android:id="@+id/action_partyListFragment_to_memberListFragment"
+            app:destination="@id/memberListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/memberListFragment"
+        android:name="finnish.parliament.fragments.MemberListFragment"
+        android:label="fragment_member_list"
+        tools:layout="@layout/fragment_member_list" >
+        <argument
+            android:name="selectedParty"
+            app:argType="finnish.parliament.data.model.MemberOfParliament" />
+        <action
+            android:id="@+id/action_memberListFragment_to_memberDetailsFragment"
+            app:destination="@id/memberDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/memberDetailsFragment"
+        android:name="finnish.parliament.fragments.MemberDetailsFragment"
+        android:label="fragment_member_details"
+        tools:layout="@layout/fragment_member_details" >
+        <argument
+            android:name="selectedMember"
+            app:argType="finnish.parliament.data.model.MemberOfParliament" />
+        <action
+            android:id="@+id/action_memberDetailsFragment_to_commentsFragment"
+            app:destination="@id/commentsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/commentsFragment"
+        android:name="finnish.parliament.fragments.CommentsFragment"
+        android:label="CommentsFragment" >
+        <argument
+            android:name="addedComments"
+            app:argType="finnish.parliament.data.model.MemberOfParliament" />
+    </fragment>
+</navigation>
